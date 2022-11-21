@@ -24,6 +24,11 @@
 	align-items: $ai;
 }
 
+%flexColumn {
+	display: flex;
+	flex-direction: column;
+}
+
 /* RWD @media query setting */
 @mixin lg-desktop {
 	@media screen and (min-width: $xxl-min) {

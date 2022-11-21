@@ -1,0 +1,163 @@
+html {
+	position: relative;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: $M_SemiBold, semi-bold;
+	font-size: 20px;
+}
+
+#main {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+section {
+	position: relative;
+	overflow:visible
+}
+
+.container {
+	position: relative;
+	max-width: $container;
+	margin: 0 auto;
+
+	padding: 0 20px;
+
+	@include table {
+		padding: 0 40px;
+	}
+}
+
+.icon svg {
+	height: 100%;
+	width: 100%;
+}
+
+.orange {
+	color: $orange;
+}
+
+// aos
+[data-aos] {
+	body[data-aos-easing="show-easing"] &,
+	&[data-aos][data-aos-easing="show-easing"] {
+		transition-timing-function: $show;
+	}
+}
+
+[data-aos="fade-down-20"] {
+	opacity: 0;
+	transform: translateY(-20px);
+	transition-property: transform, opacity;
+
+	&.aos-animate {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+[data-aos="dashed-newSmm-icon"] {
+	&.aos-animate {
+		svg {
+			path {
+				animation: moveCourseIcon 7s ease-in-out;
+			}
+		}
+	}
+}
+
+[data-aos="dashed-n-icon"] {
+	&.aos-animate {
+		svg {
+			path {
+				animation: moveNIcon 7s ease-in-out;
+			}
+		}
+	}
+}
+
+[data-aos="dashed-year-icon"] {
+	&.aos-animate {
+		svg {
+			path {
+				animation: moveYearIcon 7s ease-in-out;
+			}
+		}
+	}
+}
+
+
+[data-aos="fade-up-20"] {
+	opacity: 0;
+	transform: translateY(20px);
+	transition-property: transform, opacity;
+
+	&.aos-animate {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+[data-aos="fade-down-mask"] {
+	transform: translateY(-100%);
+	opacity: 0;
+	transition-property: transform;
+
+	&.aos-animate {
+		transform: translateY(0);
+		opacity: 1;
+		transition-property: transform, opacity;
+	}
+}
+
+[data-aos="scale-100"] {
+	transform: scale(0);
+	transition-property: transform;
+
+	&.aos-animate {
+		transform: scale(1);
+		transition-property: transform;
+	}
+}
+
+[data-aos="clip-right"] {
+	clip-path: inset(0% 200% -5% 0%);
+	transition-property: clip-path;
+
+	&.aos-animate {
+		clip-path: inset(0% 0% -5% 0%);
+		transition-property: clip-path;
+	}
+}
+
+[data-aos="clip-up"] {
+	clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+	transition-property: clip-path;
+
+	&.aos-animate {
+		clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+		transition-property: clip-path;
+	}
+}
+
+[data-aos="clip-down"] {
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	transition-property: clip-path;
+
+	&.aos-animate {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		transition-property: clip-path;
+	}
+}
+
+[data-aos="gta-effect"] {
+	opacity: 0;
+	transition-property: opacity;
+
+	&.aos-animate {
+		opacity: 1;
+	}
+}

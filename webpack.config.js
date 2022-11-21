@@ -1,7 +1,7 @@
 const CssPlugin = require('./webpack/CssPlugin')
-const CopyPlugin = require('./webpack/CopyPlugin')
 const PugPagesPlugin = require('./webpack/HtmlPlugin')
-const LiveReloadPlugin = require('./webpack/LiveReloadPlugin')
+const LiveReload = require('./webpack/LiveReload')
+const Copy = require('./webpack/CopyPlugin')
 const BabelLoader = require('./webpack/BabelLoader')
 const SassLoader = require('./webpack/SassLoader')
 const ImageMinimizer = require('./webpack/ImageMinimizer')
@@ -17,10 +17,9 @@ module.exports = {
   },
   output: {
     filename: 'js/[name].[contenthash].js',
-    assetModuleFilename: 'assets/images/[hash][ext][query]',
     clean: true,
   },
-  plugins: [CssPlugin(), CopyPlugin(), LiveReloadPlugin(), ...PugPagesPlugin()],
+  plugins: [CssPlugin(), LiveReload(), Copy(), ...PugPagesPlugin()],
   optimization: {
     runtimeChunk: 'single',
     splitChunks: {
@@ -32,17 +31,23 @@ module.exports = {
         },
       },
     },
-    minimizer: [ImageMinimizer()],
+    // minimizer: [ImageMinimizer()],
   },
   module: {
     rules: [
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[hash][ext]',
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext]',
+        },
       },
       {
         test: /\.pug$/,
