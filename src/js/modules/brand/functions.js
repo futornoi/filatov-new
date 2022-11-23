@@ -1,14 +1,11 @@
 import $ from 'jquery'
-import AOS from '../../libs/aos'
 import 'bootstrap/js/dist/modal'
-import 'bootstrap/js/dist/collapse'
 import emailjs from 'emailjs-com'
 import {
 	userIdPB,
 	serviceIdPB,
   templatePaymentIdPB,
 } from './email'
-import aosConfig from '../aosConfig'
 
 let lastScrollTop = 0
 const id = $('main').attr('id')
@@ -117,10 +114,6 @@ $(document).ready(function () {
     
     $(`${form}`).find('input[type=hidden]').val(value)
   })
-})
-
-$(window).on('load', function () {
-  AOS.init(aosConfig)
 })
 
 $(window).on('scroll', function () {

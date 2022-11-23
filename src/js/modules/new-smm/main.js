@@ -1,7 +1,5 @@
 import swipers from './swiper'
 import threeModel from './three'
-import aosConfig from '../aosConfig'
-import AOS from '../../libs/aos'
 
 import preloaderDesk from "../../../assets/images/new-smm/preloader-desk.gif"
 import preloaderMob from "../../../assets/images/new-smm/preloader-mob.gif"
@@ -69,9 +67,6 @@ addEventListener('DOMContentLoaded', async () => {
       goTo(sectionId)
     })
   })
-
-  // aos init
-  AOS.init(aosConfig)
 
   // three js
   const { rotateRight, rotateLeft } = await threeModel.init()

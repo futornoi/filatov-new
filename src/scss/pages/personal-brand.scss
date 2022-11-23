@@ -1,83 +1,89 @@
 #personal-brand-page {
-	background-color: #000 !important;
+  background-color: #000 !important;
   color: #fff;
-  font-family: "Graphik LCG", sans-serif;
+  font-family: 'Graphik LCG', sans-serif;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
-	cursor: auto;
-	button, div, a {
-		cursor: auto;
-	}
+  cursor: auto;
+  button,
+  div,
+  a {
+    cursor: auto;
+  }
   @include media-breakpoint-up(lg) {
     font-size: 16px;
     line-height: 30px;
   }
-	.cursor-dot,
-	.cursor-dot-outline {
-		mix-blend-mode: normal;
-		pointer-events: none;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		border-radius: 50%;
-		opacity: 0;
-		position: fixed;
-		-webkit-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-		-webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-		transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-		transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-		transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-	}
-	.cursor-dot {
-		z-index:-30;
-		width: 8px;
-		height: 8px;
-		background-color: $brand-green;
-		border: solid;
-		border-radius: 50%;
-		border-width: 0px;
-		border-color: #000;
-	}
-	.cursor-dot-outline {
-		z-index:-1;
-		width: 36px;
-		height: 36px;
-		background-color: rgba($brand-green, 0.2);
-		border: solid;
-		border-radius: 50%;
-		border-width: 0px;
-		border-color: #000;
-	}
-	@media screen and (min-width: 450px) {
-		cursor: none;
-		button, div, a {
-			cursor: none;
-		}
-		.cursor-dot {
-			z-index: 99999999;
-		}
-		.cursor-dot-outline {
-			z-index: 99999998;
-		}
-	}
+  .cursor-dot,
+  .cursor-dot-outline {
+    mix-blend-mode: normal;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    position: fixed;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
+      -webkit-transform 0.3s ease-in-out;
+  }
+  .cursor-dot {
+    z-index: -30;
+    width: 8px;
+    height: 8px;
+    background-color: $brand-green;
+    border: solid;
+    border-radius: 50%;
+    border-width: 0px;
+    border-color: #000;
+  }
+  .cursor-dot-outline {
+    z-index: -1;
+    width: 36px;
+    height: 36px;
+    background-color: rgba($brand-green, 0.2);
+    border: solid;
+    border-radius: 50%;
+    border-width: 0px;
+    border-color: #000;
+  }
+  @media screen and (min-width: 450px) {
+    cursor: none;
+    button,
+    div,
+    a {
+      cursor: none;
+    }
+    .cursor-dot {
+      z-index: 99999999;
+    }
+    .cursor-dot-outline {
+      z-index: 99999998;
+    }
+  }
 
-	.form-group {
-		margin-bottom: 0;
-		position: relative;
-	}
-	
-	.del {
-		position: relative;
-		display: inline-block;
-		color: inherit;
-		text-decoration: line-through;
-	}
-	.container, .container-fluid {
-		z-index: 5;
-		position: relative;
-	}
+  .form-group {
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .del {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    text-decoration: line-through;
+  }
+  .container,
+  .container-fluid {
+    z-index: 5;
+    position: relative;
+  }
   .container {
     max-width: 1728px;
     width: 100%;
@@ -102,7 +108,7 @@
       margin-top: 4px;
       padding-right: 9.45px;
       color: $brand-green;
-      font-family: "Helios Ext C", sans-serif;
+      font-family: 'Helios Ext C', sans-serif;
       text-transform: uppercase;
       font-size: 14px;
       line-height: 17px;
@@ -150,20 +156,20 @@
 }
 
 .main-section_brand {
-  background-image: url("../assets/images/brand/phone-preview-bg.jpg");
+  background-image: url('../assets/images/brand/phone-preview-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-	@media screen and (max-width: 385px) {
-		background-position: calc(50% + 10px);
-	}
+  @media screen and (max-width: 385px) {
+    background-position: calc(50% + 10px);
+  }
   @include media-breakpoint-up(lg) {
     background-image: none;
     background-color: #000;
     position: relative;
     &::before {
-      content: "";
-      background-image: url("../assets/images/brand/preview-bg.png");
+      content: '';
+      background-image: url('../assets/images/brand/preview-bg.png');
       background-size: cover;
       background-size: cover;
       background-repeat: no-repeat;
@@ -219,10 +225,10 @@
       line-height: 37px;
       margin-bottom: 100px;
     }
-		@media screen and (max-height: 768px) {
+    @media screen and (max-height: 768px) {
       margin-bottom: 74px;
     }
-		@media screen and (max-width: 385px) {
+    @media screen and (max-width: 385px) {
       margin-bottom: 36px;
     }
   }
@@ -328,7 +334,7 @@
         margin-right: 112px;
       }
     }
-		@media screen and (max-width: 348px) {
+    @media screen and (max-width: 348px) {
       & > span:nth-child(7) {
         margin-right: 86px;
       }
@@ -370,7 +376,6 @@
     }
   }
   .about-brand-item {
-    width: 722px;
     height: 155px;
     border: 2px solid #ffffff;
     overflow: hidden;
@@ -446,11 +451,11 @@
       position: relative;
       margin-right: 10px;
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         width: 295px;
         height: 295px;
-        background-image: url("../assets/images/brand/about-eye-shadow.svg");
+        background-image: url('../assets/images/brand/about-eye-shadow.svg');
         background-size: cover;
         top: 50%;
         left: -120px;
@@ -542,7 +547,7 @@
     }
     .img-open {
       &::before {
-        background-image: url("../assets/images/brand/about-eye-shadow-2.svg");
+        background-image: url('../assets/images/brand/about-eye-shadow-2.svg');
       }
     }
   }
@@ -645,7 +650,7 @@
       margin: 6px 0 24px;
       width: 214px;
       @include media-breakpoint-up(xl) {
-				margin: 12px 0 45px;
+        margin: 12px 0 45px;
         font-size: 20px;
         line-height: 20px;
       }
@@ -664,7 +669,7 @@
       }
     }
     &-1::before {
-      content: "";
+      content: '';
       position: absolute;
       z-index: 1;
       bottom: -1px;
@@ -675,7 +680,7 @@
       border-left: 53px solid $brand-green;
     }
     &-3:before {
-      content: "";
+      content: '';
       position: absolute;
       z-index: 1;
       bottom: -1px;
@@ -685,44 +690,44 @@
       border-bottom: 53px solid $brand-green;
       border-left: 53px solid transparent;
     }
-		@media screen and (max-width: 479px) {
-			&-1 {
-				clip-path: polygon(100% 0, 100% 87%, 87% 100%, 0 100%, 0 0);
-			}
-			&-1::before {
-				border-bottom: 53px solid transparent;
-			}
-		}
-		@media screen and (max-width: 459px) {
-			&-1 {
-				clip-path: polygon(100% 0, 100% 87%, 86% 100%, 0 100%, 0 0);
-			}
-		}
-		@media screen and (max-width: 439px) {
-			&-1 {
-				clip-path: polygon(100% 0, 100% 87%, 85% 100%, 0 100%, 0 0);
-			}
-		}
-		@media screen and (max-width: 419px) {
-			&-1 {
-				clip-path: polygon(100% 0, 100% 88%, 84.5% 100%, 0 100%, 0 0);
-			}
-		}
-		@media screen and (max-width: 400px) {
-			&-1 {
-				clip-path: polygon(100% 0, 100% 88%, 83.3% 100%, 0 100%, 0 0);
-			}
-		}
-		@media screen and (max-width: 388px) {
-			&-1 {
-				clip-path: polygon(100% 0, 100% 88%, 83% 100%, 0 100%, 0 0);
-			}
-		}
-		@media screen and (max-width: 374px) {
-			&-1 {
-				clip-path: polygon(100% 0, 100% 88.2%, 82% 100%, 0 100%, 0 0);
-			}
-		}
+    @media screen and (max-width: 479px) {
+      &-1 {
+        clip-path: polygon(100% 0, 100% 87%, 87% 100%, 0 100%, 0 0);
+      }
+      &-1::before {
+        border-bottom: 53px solid transparent;
+      }
+    }
+    @media screen and (max-width: 459px) {
+      &-1 {
+        clip-path: polygon(100% 0, 100% 87%, 86% 100%, 0 100%, 0 0);
+      }
+    }
+    @media screen and (max-width: 439px) {
+      &-1 {
+        clip-path: polygon(100% 0, 100% 87%, 85% 100%, 0 100%, 0 0);
+      }
+    }
+    @media screen and (max-width: 419px) {
+      &-1 {
+        clip-path: polygon(100% 0, 100% 88%, 84.5% 100%, 0 100%, 0 0);
+      }
+    }
+    @media screen and (max-width: 400px) {
+      &-1 {
+        clip-path: polygon(100% 0, 100% 88%, 83.3% 100%, 0 100%, 0 0);
+      }
+    }
+    @media screen and (max-width: 388px) {
+      &-1 {
+        clip-path: polygon(100% 0, 100% 88%, 83% 100%, 0 100%, 0 0);
+      }
+    }
+    @media screen and (max-width: 374px) {
+      &-1 {
+        clip-path: polygon(100% 0, 100% 88.2%, 82% 100%, 0 100%, 0 0);
+      }
+    }
     @include media-breakpoint-up(lg) {
       &-1::before {
         border-bottom: 74px solid #000;
@@ -792,11 +797,11 @@
   @include media-breakpoint-up(lg) {
     margin-bottom: 311px;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -265px;
       right: 0;
-      background-image: url("../assets/images/brand/light.png");
+      background-image: url('../assets/images/brand/light.png');
       background-size: cover;
       background-repeat: no-repeat;
       width: 700px;
@@ -830,9 +835,9 @@
     &__left,
     &__right {
       width: 132px;
-			@media screen and (min-widt: 375px) {
-				width: 142px;
-			}
+      @media screen and (min-widt: 375px) {
+        width: 142px;
+      }
       @include media-breakpoint-up(xl) {
         width: 171px;
       }
@@ -856,16 +861,16 @@
       }
     }
     p {
-      font-family: "Helios Ext C", sans-serif;
+      font-family: 'Helios Ext C', sans-serif;
       font-size: 13px;
       line-height: 18px;
       color: $brand-green;
       text-transform: uppercase;
       margin-bottom: 28px;
       position: relative;
-			@media screen and (min-width: 375px) {
-				font-size: 14px;
-			}
+      @media screen and (min-width: 375px) {
+        font-size: 14px;
+      }
       @include media-breakpoint-up(xl) {
         font-size: 18px;
         line-height: 24px;
@@ -1031,7 +1036,7 @@
       top: 0;
       z-index: 1;
       left: -9px;
-      content: "/";
+      content: '/';
       position: absolute;
     }
 
@@ -1603,7 +1608,7 @@
       }
     }
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       z-index: 1;
       bottom: -7px;
@@ -1931,7 +1936,7 @@
     flex-direction: column;
     margin-top: 30px;
     &__title {
-      font-family: "Helios Ext C", sans-serif !important;
+      font-family: 'Helios Ext C', sans-serif !important;
     }
     &__title-2 {
       font-weight: 500;
@@ -2393,7 +2398,7 @@
       top: 0;
       z-index: 1;
       left: -10px;
-      content: "/";
+      content: '/';
       position: absolute;
     }
   }
@@ -2501,14 +2506,14 @@
       }
     }
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       z-index: -1;
       bottom: 0;
       left: -15px;
       width: 31px;
       height: 18px;
-      background-image: url("../assets/images/brand/triangle-1.svg");
+      background-image: url('../assets/images/brand/triangle-1.svg');
       background-size: cover;
       background-repeat: no-repeat;
       @include media-breakpoint-up(lg) {
@@ -2572,14 +2577,14 @@
     background-color: #2d2d2d;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       z-index: -1;
       bottom: 8px;
       right: 0;
       width: 31px;
       height: 18px;
-      background-image: url("../assets/images/brand/triangle-2.svg");
+      background-image: url('../assets/images/brand/triangle-2.svg');
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -2699,16 +2704,18 @@
 
 //Preloader
 .brand-preloader {
-	cursor: none;
-	button, div, a {
-		cursor: none;
-	}
+  cursor: none;
+  button,
+  div,
+  a {
+    cursor: none;
+  }
   position: fixed;
   width: 100vw;
   height: 100vh;
   z-index: 999;
   &__video {
-		width: 100%;
+    width: 100%;
     height: 100%;
     background-color: #000;
 
@@ -2716,18 +2723,24 @@
       object-fit: contain;
     }
   }
-	.brand-preloader__desktop {
-		display: none;
-	}
-	.brand-preloader__mobile {
-		display: block;
-	}
+  .brand-preloader__desktop {
+    display: none;
+  }
+  .brand-preloader__mobile {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   @media (min-width: 479px) {
     .brand-preloader__desktop {
-			display: block;
-		}
-		.brand-preloader__mobile {
-			display: none;
-		}
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .brand-preloader__mobile {
+      display: none;
+    }
   }
 }

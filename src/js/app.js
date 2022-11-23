@@ -1,6 +1,12 @@
 require('bootstrap/js/dist/collapse')
+import AOS from './libs/aos'
+import aosConfig from './modules/aosConfig'
 
 const id = document.getElementsByTagName('main')[0].getAttribute('id')
+
+addEventListener('DOMContentLoaded', async () => {
+	AOS.init(aosConfig)
+})
 
 switch (id) {
   case 'main-page':

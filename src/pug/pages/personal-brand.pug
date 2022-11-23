@@ -262,7 +262,7 @@ append content
 									span.del 290$
 									|  200$
 						.btn-row(data-aos="clip-right" data-aos-delay="6750")
-							button.custom-btn(type="button" data-toggle="modal" data-target="#reservation-brand")
+							button.custom-btn(type="button" data-bs-toggle="modal" data-bs-target="#reservation-brand")
 								span забронировать
 								<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M10.5107 0.572754H8.1315V10.8828H10.5107V0.572754Z" fill="#AEFF00"/>
@@ -439,7 +439,7 @@ append content
 								p.dino-game__info-text!=dino.text 
 							+imageBrand("dot.svg", "dot").dino-game__dot
 				.btn-row(data-aos="clip-right" data-aos-delay="150")
-					button.custom-btn.dino-game__btn(type="button" data-toggle="modal")
+					button.custom-btn.dino-game__btn(type="button" data-bs-toggle="modal")
 						span Нажми на кнопку
 		section#programs.programs-section
 			.container
@@ -447,7 +447,7 @@ append content
 				#program-collapse.accordion
 					each program, index in programs
 						.card(data-aos="clip-right-short" data-aos-delay=`${100 + (index * 100)}` data-aos-duration="1000")
-							.card-header.collapsed(data-toggle="collapse" data-target=`#${program.id}`)
+							.card-header.collapsed(data-bs-toggle="collapse" data-bs-target=`#${program.id}`)
 								p.card-number(data-aos="fade-right-20" data-aos-delay=`${150 + (index * 100)}`)=`блок ${index + 1}.`
 								p.card-title(data-aos="fade-right-20" data-aos-delay=`${200 + (index * 100)}`)=program.title
 								button.card-toggle(type="button")
@@ -549,7 +549,7 @@ append content
 								while t++ < 10
 									p.text 15 мест
 						.btn-row(data-aos="clip-right" data-aos-delay="1000")
-							button.custom-btn(type="button" data-toggle="modal" data-target="#reservation-brand")
+							button.custom-btn(type="button" data-bs-toggle="modal" data-bs-target="#reservation-brand")
 								span забронировать
 								<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M10.5107 0.572754H8.1315V10.8828H10.5107V0.572754Z" fill="#AEFF00"/>
@@ -584,7 +584,7 @@ append content
 									+imageBrand("check-mark.svg", "check-mark")
 								span индивидуальное сопровождение от @filatovsmm  во время курса и в течение 30 дней после его окончания
 						.btn-row(data-aos="clip-right" data-aos-delay="1000")
-							button.custom-btn(type="button" data-toggle="modal" data-target="#reservation-brand")
+							button.custom-btn(type="button" data-bs-toggle="modal" data-bs-target="#reservation-brand")
 								span забронировать
 								<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M10.5107 0.572754H8.1315V10.8828H10.5107V0.572754Z" fill="#AEFF00"/>
@@ -597,7 +597,7 @@ append content
 				#questions-collapse.accordion
 					each question, index in questions
 						.card(data-aos="clip-right-short" data-aos-delay=`${100 + (index * 100)}` data-aos-duration="1000")
-							.card-header.collapsed(data-toggle="collapse" data-target=`#${question.id}`)
+							.card-header.collapsed(data-bs-toggle="collapse" data-bs-target=`#${question.id}`)
 								p.card-title(data-aos="fade-right-20" data-aos-delay=`${150 + (index * 100)}`)=question.title
 								button.card-toggle(type="button")
 									+imageBrand("arrow-down.png", "arrow-down")
