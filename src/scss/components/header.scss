@@ -1,41 +1,17 @@
-#header {
+.main__header {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 10;
-
-	&:before {
-		content: '';
-		display: block;
-		position: absolute;
-		left: 0;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		background-color: $orange;
-		transform: translateY(-100%);
-		transition: $transition;
-
-	}
-
-	&.active:before {
-		transform: translateY(0);
-	}
-}
-
-.header__container {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	@include flex(space-between, center);
-
-	&_logo {
-		position: relative;
-		cursor: pointer;
-	}
-
-	@include desktop-sm {
-		padding-top: 17px;
-		padding-bottom: 17px;
-	}
+  .instagram {
+		font-family: $M_Medium;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+		padding: 5px 18px 5px 22px;
+		border: 1px solid #FFFFFF;
+		border-radius: 111px;
+  }
 }

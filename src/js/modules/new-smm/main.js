@@ -1,7 +1,10 @@
 import swipers from './swiper'
 import threeModel from './three'
-import aosConfig from './aosConfig'
-import AOS from '../libs/aos'
+import aosConfig from '../aosConfig'
+import AOS from '../../libs/aos'
+
+import preloaderDesk from "../../../assets/images/new-smm/preloader-desk.gif"
+import preloaderMob from "../../../assets/images/new-smm/preloader-mob.gif"
 
 const getModal = name => {
   return document?.querySelector(`[data-modal=${name}]`)
@@ -143,4 +146,21 @@ addEventListener('DOMContentLoaded', async () => {
       content.animate(show, timing)
     }
   })
+
+	  // Preloader
+		const html = document.getElementsByTagName("html")[0];
+		const smmPreloader = document.querySelectorAll(".smm-preloader")[0];
+		const imgDesktop = smmPreloader.querySelector(".smm-preloader__desktop");
+		const imgMobile = smmPreloader.querySelector(".smm-preloader__mobile");
+		imgDesktop.setAttribute("src", preloaderDesk);
+		imgMobile.setAttribute("src", preloaderMob);
+	
+		setTimeout(() => {
+			html.style.overflow = "auto";
+			smmPreloader.classList.add("hide");
+			imgDesktop.removeAttribute("src");
+			imgMobile.removeAttribute("src");
+			smmPreloader.remove();
+		}, 4000);
+		
 })
