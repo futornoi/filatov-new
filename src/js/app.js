@@ -7,10 +7,12 @@ switch (id) {
     require('./modules/index')
     break
   case 'new-smm':
-		require('./modules/pageHeight')
-		require('./modules/new-smm/header')
-		require('./modules/new-smm/main')
-	case 'personal-brand-page':
-		require('./modules/brand/functions')
+    require('./modules/pageHeight')
+    require('./modules/new-smm/header')
+    require('./modules/new-smm/main')
+    break
+  case 'personal-brand-page':
+    require('./modules/brand/functions')
     require('./modules/brand/main')
+    break
 }

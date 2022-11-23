@@ -1,4 +1,7 @@
-extends includes/layout
+extends ../layouts/layout
+
+include ../helpers/_mixins
+include ../helpers/_icons
 
 block vars
 	- var page = 'privacy'
@@ -10,7 +13,6 @@ append content
 				.row
 					.col-12.col-lg-8.offset-lg-2
 						h1.section-title(data-word="политика конфиденциальности")
-
 						.privacy-section__text-wrap(data-aos="fade-up-20" data-aos-delay="650")
 							p Политика Конфиденциальности сайта <a href="/">filatoveducation.com</a>
 							br
