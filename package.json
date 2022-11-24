@@ -45,6 +45,9 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.2",
+    "emailjs-com": "^3.2.0",
+    "jquery": "^3.6.1",
+    "slick-slider": "^1.8.2",
     "swiper": "^8.4.4",
     "three": "^0.146.0"
   },

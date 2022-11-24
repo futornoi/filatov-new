@@ -7,6 +7,7 @@ html {
 body {
 	font-family: $M_SemiBold, semi-bold;
 	font-size: 20px;
+	overflow-x: hidden;
 }
 
 #main {
@@ -38,6 +39,10 @@ section {
 
 .orange {
 	color: $orange;
+}
+
+.slick-slide {
+	outline: none !important;
 }
 
 // aos
@@ -89,6 +94,86 @@ section {
 	}
 }
 
+body [data-aos-delay='3100'][data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='3100'].aos-animate {
+	transition-delay: 3.1s;
+}
+
+body [data-aos-delay='3200'][data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='3200'].aos-animate {
+	transition-delay: 3.2s;
+}
+
+body [data-aos-delay='3300'][data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='3300'].aos-animate {
+	transition-delay: 3.3s;
+}
+
+body [data-aos-delay='3500'][data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='3500'].aos-animate {
+	transition-delay: 3.5s;
+}
+
+body [data-aos-delay='3650'][data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='3650'].aos-animate {
+	transition-delay: 3.65s;
+}
+
+body [data-aos-delay='6100'][data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='6100'].aos-animate {
+	transition-delay: 6.1s;
+}
+
+body [data-aos-delay='6150'][data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='6150'].aos-animate {
+	transition-delay: 6.15s;
+}
+
+body [data-aos-delay='6350'][data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='6350'].aos-animate {
+	transition-delay: 6.35s;
+}
+
+body [data-aos-delay='6550'][data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='6550'].aos-animate {
+	transition-delay: 6.55s;
+}
+
+body [data-aos-delay='6750'][data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='6750'].aos-animate {
+	transition-delay: 6.75s;
+}
+
+[data-aos="fade-right-20"] {
+	opacity: 0;
+	transform: translate(-20px);
+	transition-property: transform, opacity;
+
+	&.aos-animate {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+[data-aos="fade-up-mask"] {
+	transform: translateY(-100%);
+	transition-property: transform;
+
+	&.aos-animate {
+		transform: translateY(0);
+		transition-property: transform;
+	}
+}
+
+[data-aos="clip-right-short"] {
+	clip-path: inset(0% 100% -5% 0%);
+	transition-property: clip-path;
+
+	&.aos-animate {
+		clip-path: inset(0% 0% -5% 0%);
+		transition-property: clip-path;
+	}
+}
 
 [data-aos="fade-up-20"] {
 	opacity: 0;

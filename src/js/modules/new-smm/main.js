@@ -1,7 +1,8 @@
 import swipers from './swiper'
 import threeModel from './three'
-import aosConfig from './aosConfig'
-import AOS from '../libs/aos'
+
+import preloaderDesk from '../../../assets/images/new-smm/preloader-desk.gif'
+import preloaderMob from '../../../assets/images/new-smm/preloader-mob.gif'
 
 const getModal = name => {
   return document?.querySelector(`[data-modal=${name}]`)
@@ -66,9 +67,6 @@ addEventListener('DOMContentLoaded', async () => {
       goTo(sectionId)
     })
   })
-
-  // aos init
-  AOS.init(aosConfig)
 
   // three js
   const { rotateRight, rotateLeft } = await threeModel.init()
@@ -143,4 +141,27 @@ addEventListener('DOMContentLoaded', async () => {
       content.animate(show, timing)
     }
   })
+
+  // Preloader
+  const html = document.getElementsByTagName('html')[0]
+  const smmPreloader = document.querySelectorAll('.smm-preloader')[0]
+  const videContainer = smmPreloader.querySelector('.smm-preloader__video')
+  const imgDesktop = document.createElement('img')
+  const imgMobile = document.createElement('img')
+
+  imgDesktop.setAttribute('src', preloaderDesk)
+  imgDesktop.classList.add('smm-preloader__desktop')
+  videContainer.appendChild(imgDesktop)
+
+  imgMobile.setAttribute('src', preloaderMob)
+  imgMobile.classList.add('smm-preloader__mobile')
+  videContainer.appendChild(imgMobile)
+
+  setTimeout(() => {
+    html.style.overflow = 'auto'
+    smmPreloader.classList.add('hide')
+    imgDesktop.remove()
+    imgMobile.remove()
+    smmPreloader.remove()
+  }, 4000)
 })

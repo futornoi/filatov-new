@@ -2677,6 +2677,11 @@ electron-to-chromium@^1.4.251:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.284.tgz#61046d1e4cab3a25238f6bf7413795270f125592"
   integrity sha512-M8WEXFuKXMYMVr45fo8mq0wUrrJHheiKZf6BArTKk9ZBYCKJEOU5H8cdWgDT+qCVZf7Na4lVUaZsA+h6uA9+PA==
 
+emailjs-com@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/emailjs-com/-/emailjs-com-3.2.0.tgz#a53cb22f1bc433c701c84c53d8b56eefd5ce7111"
+  integrity sha512-Prbz3E1usiAwGjMNYRv6EsJ5c373cX7/AGnZQwOfrpNJrygQJ15+E9OOq4pU8yC977Z5xMetRfc3WmDX6RcjAA==
+
 emojis-list@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-3.0.0.tgz#5570662046ad29e2e916e71aae260abdff4f6a78"
@@ -3843,6 +3848,11 @@ jpegtran-bin@^5.0.0:
     bin-build "^3.0.0"
     bin-wrapper "^4.0.0"
     logalot "^2.0.0"
+
+jquery@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.1.tgz#fab0408f8b45fc19f956205773b62b292c147a16"
+  integrity sha512-opJeO4nCucVnsjiXOE+/PcCgYw9Gwpvs/a6B1LL/lQhwWwpbVEVYDZ1FokFr8PRc7ghYlrFPuyHuiiDNTQxmcw==
 
 js-stringify@^1.0.2:
   version "1.0.2"
@@ -5614,6 +5624,11 @@ slash@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-4.0.0.tgz#2422372176c4c6c5addb5e2ada885af984b396a7"
   integrity sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==
+
+slick-slider@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/slick-slider/-/slick-slider-1.8.2.tgz#cdb0ccd97c3bcd9807c22474968b1673077e35e0"
+  integrity sha512-/NGT7QzlC1/LNu198ad+rM8xJcgSXgiptUPbY0oMmtZ/8K2G9s6mMpLo7um6FIIQ135vUjsnP2gWY5DKJe2qJw==
 
 sockjs@^0.3.24:
   version "0.3.24"

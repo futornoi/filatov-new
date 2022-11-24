@@ -1,67 +1,29 @@
-#footer {
-	background-color: $black;
-	color: $white;
-}
+.main__footer {
+	display: none;
+	background-color: $orange;
+	position: static;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	padding-bottom: 18px;
+  .confidentiality {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.05em;
+    color: rgba(0, 0, 0, 0.33);
+  }
 
-.footer__container {
-	padding-top: 43px;
-	padding-bottom: 55px;
-
-	@include table {
-		padding-top: 56px;
-		padding-bottom: 67px;
-	}
-}
-
-.footer__content {
-	display: grid;
-	grid-template-columns: 1fr;
-	align-items: center;
-	font-size: 20px;
-	line-height: 22px;
-	letter-spacing: -0.02em;
-	grid-gap: 30px;
-
-	.confidentiality {
-		text-align: center;
+	@media screen and (min-width: 992px) {
+		display: block;
 	}
 
-	.logo {
-		color: $orange;
-		text-align: center;
-		order: -1;
-
-		.logo-icon {
-			width: 24px;
-			margin: 0 auto 30px;
-			svg path {
-				fill: $orange;
-			}
-		}
+	@media screen and (min-width: 1042px) {
+		background-color: transparent;
+		position: fixed;
 	}
 
-	.contacts {
-		text-align: center;
-		@extend %flexColumn;
-		margin: 0 auto;
-	}
-
-	@include table {
-		text-align: center;
-		justify-content: center;
-		grid-template-columns: repeat(3, 1fr);
-
-		.confidentiality {
-			text-align: left;
-		}
-
-		.logo {
-			order: unset;
-		}
-
-		.contacts {
-			text-align: left;
-			margin-left: auto;
-		}
+	@media screen and (min-width: 1450px) {
+		padding-bottom: 38px;	
 	}
 }
