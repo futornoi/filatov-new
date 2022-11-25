@@ -13,6 +13,9 @@
 
 		img {
 			width: 100%;
+			&.filatov {
+				margin-top: -7%;
+			}
 		}
 	}
 
@@ -40,6 +43,14 @@
 			font-family: $M_Medium;
 			font-size: 16px;
 			line-height: 20px;
+		}
+	}
+
+	@include table {
+		.speaker__photo {
+			img.filatov {
+				margin-top: -23%;
+			}
 		}
 	}
 
