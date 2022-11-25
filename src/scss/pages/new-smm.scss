@@ -72,8 +72,13 @@
             margin-top: unset;
           }
 
+					.title-word.special {
+						margin-left: -9px;
+					}
+	
           .hero__action {
             order: 0;
+            justify-content: center;
 
             .title-btn {
               @include size(201px, 201px, 50%);
@@ -154,6 +159,12 @@
       bottom: 30%;
       left: 0;
     }
+
+    @include table {
+      .container {
+        padding: 0 50px;
+      }
+    }
   }
 
   // ABOUT
@@ -213,8 +224,16 @@
             gap: 7px;
 
             img {
-              @include size(25px, 20px);
+              @include size(24.5px, 20px);
             }
+          }
+
+          &.arrows__mobile {
+            display: none;
+          }
+
+          &.arrows__desktop {
+            display: flex;
           }
 
           &.person {
@@ -228,6 +247,39 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+          }
+					@include phone {
+            &.zebra {
+              flex: 1 1 85px;
+            }
+            &.arrows__mobile {
+              display: flex;
+            }
+            &.arrows__desktop {
+              display: none;
+            }
+          }
+          @media screen and (max-width: 480px) {
+            &.arrows {
+              margin: 0 1px 7px;
+            }
+            &.arrows__mobile {
+              max-width: 120px;
+              width: 100%;
+            }
+						&.special {
+							width: 100%;
+						}
+          }
+
+          @media screen and (max-width: 405px) {
+            &.arrows__mobile {
+              max-width: 89px;
+              width: 100%;
+            }
+            &.person {
+              flex: 1 1 82px;
+            }
           }
         }
       }
@@ -326,7 +378,7 @@
       padding-bottom: 150px;
       padding-top: 100px;
       margin-bottom: 100px;
-      margin-top: 100px;
+      margin-top: 70px;
       @extend %flexColumn;
       justify-content: center;
 
@@ -334,6 +386,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 73px 61px;
+				padding-left: 20px;
       }
 
       .info__block {
@@ -361,6 +414,10 @@
         }
       }
 
+			@media screen and (max-width: 576px) {
+				margin-top: 20px;
+			}
+
       @include table {
         .info__block {
           &_number {
@@ -373,6 +430,7 @@
       @include desktop {
         .info__content {
           grid-gap: 100px 300px;
+					padding-left: 30px;
         }
         .info__block {
           &_count {
@@ -400,13 +458,11 @@
 
       @include lg-desktop {
         .info__block {
-          &_count {
-            left: -30px;
-          }
 
           &_number {
             font-size: 244px;
             line-height: 200px;
+						margin-bottom: 35px;
           }
 
           &_text {
@@ -481,6 +537,10 @@
         }
       }
 
+			@media screen and (max-width: 576px) {
+				padding-top: 20px;
+			}
+
       @include desktop-sm {
         padding-top: 150px;
         padding-bottom: 150px;
@@ -554,6 +614,17 @@
           }
         }
       }
+
+			@media screen and (min-width: 1050px) and (max-width: 1599px) {
+				.problems_box {
+					&:nth-child(2) {
+            right: 21%;
+          }
+          &:nth-child(3) {
+            left: 21%;
+          }
+				}
+			}
     }
   }
 
@@ -755,6 +826,10 @@
       width: 90vw;
     }
 
+		.swiper-slide {
+			padding-bottom: 10px;
+		}
+
     .forWhom__content {
       .forWhom__main-title {
         @extend %flexColumn;
@@ -859,6 +934,12 @@
       @extend %flexColumn;
       gap: 16px;
     }
+
+		@media screen and (max-width: 576px) {
+			.howGoing__container {
+				padding-top: 10px;
+			}
+		}
 
     @include desktop-sm {
       .howGoing__container {
@@ -972,6 +1053,12 @@
         z-index: 3;
       }
     }
+
+		@media screen and (max-width: 576px) {
+			.sticker__content .sticker {
+        right: -42%;
+      }
+		}
 
     @include table {
       .sticker__content {
@@ -1766,6 +1853,11 @@
       }
     }
   }
+}
+
+.modal-smm .modal-content {
+  border: 2px solid $orange;
+  color: $orange;
 }
 
 //Preloader

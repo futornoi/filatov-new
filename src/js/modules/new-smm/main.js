@@ -101,7 +101,7 @@ addEventListener('DOMContentLoaded', async () => {
   let index = 1
   const resultTitles = ['сммити', 'продавати', 'організовувати']
   const resultDescriptions = [
-    'на рівні seniour+',
+    'на рівні seniour.',
     'свої послуги дорого та системно навіть під час війни.',
     'роботу над проєктами так, щоб не потопати в дедлайнах та не вигоряти.',
   ]

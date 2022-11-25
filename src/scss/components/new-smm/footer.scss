@@ -3,13 +3,23 @@
 	color: $white;
 }
 
+.micore-link {
+	font-size: 16px;
+	text-align: center;
+	&.footer__container {
+		padding-bottom: 20px;
+	
+		@include table {
+			padding-bottom: 40px;
+		}
+	}
+}
+
 .footer__container {
 	padding-top: 43px;
-	padding-bottom: 55px;
 
 	@include table {
 		padding-top: 56px;
-		padding-bottom: 67px;
 	}
 }
 

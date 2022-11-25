@@ -37,9 +37,6 @@
       &-btn {
         color: #e95200;
       }
-      &-btn span {
-        border-bottom: 1px solid $orange;
-      }
     }
   }
 
@@ -68,8 +65,11 @@
         max-width: 280px;
         width: 100%;
       }
-      &-btn span {
-        border-bottom: 1px solid #fff;
+      &-btn {
+				color: #fff;
+				&::before {
+					background-color: #fff;
+				}
       }
     }
   }
@@ -104,7 +104,22 @@
       font-size: 24px;
       line-height: 22px;
       letter-spacing: -0.05em;
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				background-color: $orange;
+				transition: width 0.35s;
+				transform-origin: left;
+				left: 0;
+				bottom: -1px;
+				width: 0;
+				height: 1px;
+			}
     }
+		&-btn:hover::before{
+			width: 100%;
+		}
   }
 
   .course-container {

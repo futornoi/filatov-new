@@ -1,8 +1,5 @@
 import $ from 'jquery'
 import 'bootstrap/js/dist/modal'
-import Modal from 'bootstrap/js/dist/modal'
-import emailjs from 'emailjs-com'
-import { serviceIdPB, templatePaymentIdPB, userIdPB } from './email'
 
 let lastScrollTop = 0
 const id = $('main').attr('id')
@@ -30,49 +27,6 @@ $(document).ready(function () {
     $('.global-menu').toggleClass('open')
     $('body').toggleClass('modal-open')
     $(this).toggleClass('is-opened')
-  })
-
-  $('form').on('submit', function (e) {
-    const form = $(this)
-    const service = serviceIdPB
-    const user = userIdPB
-    const submitBtn = form.find('button[type=submit]')
-    const templateId = templatePaymentIdPB
-    e.preventDefault()
-
-    submitBtn.attr('disabled', true)
-
-    emailjs.sendForm(service, templateId, e.target, user).then(
-      res => {
-        if (res.status === 200) {
-          const myModal = new Modal(form.parents('.modal'), {
-            keyboard: false,
-          })
-          const successModal = new Modal(document.getElementById('success'), {
-            keyboard: false,
-          })
-          submitBtn.attr('disabled', false)
-          form.find('input, textarea').val('')
-          myModal.hide()
-
-          setTimeout(function () {
-            successModal.show()
-          }, 500)
-        }
-      },
-      err => {
-        if (err) {
-          submitBtn.attr('disabled', false)
-          form.append(
-            `<small class="form-error">Ошибка при отправке заявки! Попробуйте позже</small>`,
-          )
-
-          setTimeout(function () {
-            form.find('small').remove()
-          }, 2500)
-        }
-      },
-    )
   })
 
   $('.global-menu__link').on('click', function (e) {
