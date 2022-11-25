@@ -11,6 +11,13 @@ const id = document.getElementsByTagName('main')[0].getAttribute('id')
 $(document).ready(function () {
   AOS.init(aosConfig)
 
+	const brandModal = new Modal(document.getElementById('reservation-brand'), {
+		keyboard: false,
+	})
+	const successModal = new Modal(document.getElementById('success'), {
+		keyboard: false,
+	})
+
   $('form').on('submit', function (e) {
     const form = $(this)
     const id = form.attr('id')
@@ -25,22 +32,14 @@ $(document).ready(function () {
     emailjs.sendForm(service, templateId, e.target, user).then(
       res => {
         if (res.status === 200) {
-					const brandModal = new Modal(form.parents('.modal'), {
-						keyboard: false,
-					})
-					const successModal = new Modal(document.getElementById('success'), {
-            keyboard: false,
-          })
-					
           submitBtn.attr('disabled', false)
           form.find('input, textarea').val('')
 
-					if(id === 'reservation-brand-form') {
-						console.log(brandModal)
-						brandModal.hide()
-					} else {
-						$(`[data-modal=reserve]`).removeClass('active')
-					}
+          if (id === 'reservation-brand-form') {
+            brandModal.hide()
+          } else {
+            $(`[data-modal=reserve]`).removeClass('active')
+          }
           setTimeout(function () {
             successModal.show()
           }, 500)
