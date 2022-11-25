@@ -72,10 +72,10 @@
             margin-top: unset;
           }
 
-					.title-word.special {
-						margin-left: -9px;
-					}
-	
+          .title-word.special {
+            margin-left: -9px;
+          }
+
           .hero__action {
             order: 0;
             justify-content: center;
@@ -248,7 +248,7 @@
             background-size: cover;
             background-position: center;
           }
-					@include phone {
+          @include phone {
             &.zebra {
               flex: 1 1 85px;
             }
@@ -259,6 +259,7 @@
               display: none;
             }
           }
+
           @media screen and (max-width: 480px) {
             &.arrows {
               margin: 0 1px 7px;
@@ -267,9 +268,9 @@
               max-width: 120px;
               width: 100%;
             }
-						&.special {
-							width: 100%;
-						}
+            &.special {
+              width: 100%;
+            }
           }
 
           @media screen and (max-width: 405px) {
@@ -279,6 +280,18 @@
             }
             &.person {
               flex: 1 1 82px;
+            }
+          }
+
+          @media screen and (max-width: 374px) {
+            &.zebra {
+              flex: 1 1 60px;
+            }
+            &.arrows__mobile {
+              max-width: 79px;
+              img {
+                @include size(20.5px, 20px);
+              }
             }
           }
         }
@@ -386,7 +399,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 73px 61px;
-				padding-left: 20px;
+        padding-left: 20px;
       }
 
       .info__block {
@@ -414,9 +427,15 @@
         }
       }
 
-			@media screen and (max-width: 576px) {
-				margin-top: 20px;
-			}
+      @media screen and (max-width: 576px) {
+        margin-top: 20px;
+      }
+
+      @media screen and (max-width: 374px) {
+        .info__content {
+          grid-gap: 73px 51px;
+        }
+      }
 
       @include table {
         .info__block {
@@ -430,7 +449,7 @@
       @include desktop {
         .info__content {
           grid-gap: 100px 300px;
-					padding-left: 30px;
+          padding-left: 30px;
         }
         .info__block {
           &_count {
@@ -458,11 +477,10 @@
 
       @include lg-desktop {
         .info__block {
-
           &_number {
             font-size: 244px;
             line-height: 200px;
-						margin-bottom: 35px;
+            margin-bottom: 35px;
           }
 
           &_text {
@@ -537,9 +555,9 @@
         }
       }
 
-			@media screen and (max-width: 576px) {
-				padding-top: 20px;
-			}
+      @media screen and (max-width: 576px) {
+        padding-top: 20px;
+      }
 
       @include desktop-sm {
         padding-top: 150px;
@@ -615,16 +633,16 @@
         }
       }
 
-			@media screen and (min-width: 1050px) and (max-width: 1599px) {
-				.problems_box {
-					&:nth-child(2) {
+      @media screen and (min-width: 1050px) and (max-width: 1599px) {
+        .problems_box {
+          &:nth-child(2) {
             right: 21%;
           }
           &:nth-child(3) {
             left: 21%;
           }
-				}
-			}
+        }
+      }
     }
   }
 
@@ -826,9 +844,9 @@
       width: 90vw;
     }
 
-		.swiper-slide {
-			padding-bottom: 10px;
-		}
+    .swiper-slide {
+      padding-bottom: 10px;
+    }
 
     .forWhom__content {
       .forWhom__main-title {
@@ -935,11 +953,11 @@
       gap: 16px;
     }
 
-		@media screen and (max-width: 576px) {
-			.howGoing__container {
-				padding-top: 10px;
-			}
-		}
+    @media screen and (max-width: 576px) {
+      .howGoing__container {
+        padding-top: 10px;
+      }
+    }
 
     @include desktop-sm {
       .howGoing__container {
@@ -1054,11 +1072,11 @@
       }
     }
 
-		@media screen and (max-width: 576px) {
-			.sticker__content .sticker {
+    @media screen and (max-width: 576px) {
+      .sticker__content .sticker {
         right: -42%;
       }
-		}
+    }
 
     @include table {
       .sticker__content {
