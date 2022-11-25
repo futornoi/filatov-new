@@ -4,19 +4,26 @@ import aosConfig from './modules/aosConfig'
 import Modal from 'bootstrap/js/dist/modal'
 import emailjs from 'emailjs-com'
 import $ from 'jquery'
-import { serviceId, templatePaymentIdPB, userId, templatePaymentIdNS } from './modules/email'
+import { serviceId, templatePaymentIdNS, templatePaymentIdPB, userId } from './modules/email'
 
 const id = document.getElementsByTagName('main')[0].getAttribute('id')
 
 $(document).ready(function () {
   AOS.init(aosConfig)
 
-	const brandModal = new Modal(document.getElementById('reservation-brand'), {
-		keyboard: false,
-	})
-	const successModal = new Modal(document.getElementById('success'), {
-		keyboard: false,
-	})
+  const resModal = document?.getElementById('reservation-brand')
+  const sucModal = document?.getElementById('success')
+  let resModalBootstrap
+  let sucModalBootstrap
+
+  if (resModal && sucModal) {
+    resModalBootstrap = new Modal(document?.getElementById('reservation-brand'), {
+      keyboard: false,
+    })
+    sucModalBootstrap = new Modal(document?.getElementById('success'), {
+      keyboard: false,
+    })
+  }
 
   $('form').on('submit', function (e) {
     const form = $(this)
@@ -36,12 +43,13 @@ $(document).ready(function () {
           form.find('input, textarea').val('')
 
           if (id === 'reservation-brand-form') {
-            brandModal.hide()
+            resModalBootstrap.hide()
           } else {
             $(`[data-modal=reserve]`).removeClass('active')
+            $(`[data-burger-btn]`).removeClass('open')
           }
           setTimeout(function () {
-            successModal.show()
+            sucModalBootstrap.show()
           }, 500)
         }
       },
